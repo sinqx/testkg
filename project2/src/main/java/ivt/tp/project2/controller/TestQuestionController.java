@@ -50,7 +50,7 @@ public class TestQuestionController {
     public String findAllQuestionById(Long id, Model model) {
         List<TestQuestion> testQuestion = testQuestionService.findAllQuestionByTestId((long)1);
         System.out.println(Arrays.toString(testQuestion.toArray()));
-        return "/index";
+        return "index";
     }
 
 
@@ -58,7 +58,7 @@ public class TestQuestionController {
     public String findAllCorrectOptionByTestId(Long id, Model model) {
         List<TestQuestion> testQuestion = testQuestionService.findAllQuestionByTestId((long)1);
         System.out.println(Arrays.toString(testQuestion.toArray()));
-        return "/index";
+        return "index";
     }
     @DeleteMapping("deleteQuestion/{testQuestionId}")
     public void delete(@PathVariable Long testQuestionId) {
