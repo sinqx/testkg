@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event-KG</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+<nav th:fragment="navbar">
+    <div class="block-body">
+        <header>
+            <div class="mainLogo">
+                <a th:href="@{/index}"> Test-KG</a>
+            </div>
+
+            <div sec:authorize="isAuthenticated()" class="navBarMenu">
+                <ul>
+                    <li><a th:href="@{/userPage}">моя страница</a></li>
+                </ul>
+            </div>
+
+            <div sec:authorize="isAnonymous()" class="auth">
+                <a href="/registration"> <img
+                        th:src="@{https://res.cloudinary.com/sinqxcode/image/upload/v1648574671/enter_svokme.png}"></a>
+            </div>
+        </header>
+    </div>
+</nav>
+</body>
+</html>

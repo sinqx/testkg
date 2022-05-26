@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Event-KG</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+<div th:insert="navbar :: navbar"></div>
+
+<div class="container" style="max-width: fit-content; margin: 5em auto;">
+    <form class="my_page" th:object="${myPage}">
+        <img th:object="${Photo}" th:src="${Photo.getURL()}"
+             align="left" width="300px" class="userPic">
+        <div class="page">
+            <h1>
+                <ul><span th:text="${myPage.fullName}"> </span></ul>
+            </h1>
+            <a>Email: <span th:text="${myPage.email}"> </span></a>
+            <br/><br/>
+            <a>Телефон:<span th:text="${myPage.phoneNumber}"> </span></a>
+            <br/><br/>
+            <a> Дата рождения: <span th:text="${myPage.dateOfBirth}"> </span></a>
+            <br/><br/>
+            <a> Дата регистрации: <span th:text="${myPage.creationDate.toLocalDate()}"> </span></a>
+            <br/><br/>
+        </div>
+        <div  sec:authorize="isAuthenticated()" class="settings">
+            <a class="text" th:href="@{userSettings}"> Редактировать </a>
+            <a class="text" th:href="@{/createTest}"> Создать новый тест</a>
+        </div>
+    </form>
+    <div class="container" style="max-width: fit-content; margin: 5em auto;">
+        <form class="my_page">
+            <div class="container col-10">
+                <table id="myTable" class=" table order-list">
+                    <tbody>
+                    <tr th:each="test: ${tests}">
+                        <td class="col-sm-10">
+                           <a>Название теста:   </a> <a class="text" th:text="${test.title}"
+                               th:href="@{/addQuestions/{id}(id = ${test.getId()})} ">
+                               </a><a class="creationDate" th:text="'Создано: ' + ${test.creationDate.toLocalDate()}"></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

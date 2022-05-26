@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Event-KG</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+
+<body>
+
+<script>
+    function validateRegistrationForm() {
+        password = document.forms["registrationForm"]["password"].value;
+        repeatPassword = document.forms["registrationForm"]["repeatPassword"].value;
+
+        if (password !== repeatPassword) {
+            alert("Passwords don't match!");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+<div th:insert="navbar :: navbar"></div>
+
+
+<form th:action="@{/sign-up}" th:object="${user} "
+      method="post" name="registrationForm" onsubmit="return validateRegistrationForm()" style=" margin: 5em auto; ">
+    <div class="reg_block">
+
+        <h1 class="reg">Регистрация</h1>
+        <p class="reg">Заполните данные для того, чтобы создать аккаунт.</p>
+        <br/>
+        <div>
+            <p th:each="error: ${#fields.errors('fullName')}" th:text="${error}">Validation error</p>
+            <label class="col-form-label col-7"> Имя</label><br/>
+            <input  type="text" th:field="*{fullName}" class="form-control" th:required="true" th:autofocus="true"/>
+        </div>
+        <div>
+            <p th:each="error: ${#fields.errors('login')}" th:text="${error}">Validation error</p>
+            <label class="col-form-label col-7"> Логин </label><br/>
+            <input type="text" th:field="*{login}" class="form-control" th:required="true" th:autofocus="true"/>
+        </div>
+        <div>
+            <p th:each="error: ${#fields.errors('email')}" th:text="${error}">Validation error</p>
+            <label class="col-form-label col-7">Email</label><br/>
+            <input th:field="*{email}" type="text" class="form-control" th:required="true"/>
+        </div>
+
+        <label for="dateOfBirth">Дата рождения:</label>
+        <input class="calendar" type="date" id="dateOfBirth" th:name="*{dateOfBirth}"
+               value="2022-02-22" required
+               min="1900-01-01" max="2018-12-31">
+
+        <div>
+            <p th:each="error: ${#fields.errors('password')}" th:text="${error}">Validation error</p>
+            <label>Пароль</label><br/>
+            <input th:field="*{password}" type="password" class="form-control" th:required="true"/>
+        </div>
+        <div>
+            <label>Потвердите пароль</label>
+            <input name="repeatPassword" type="password" class="form-control" th:required="true"/>
+        </div>
+
+        <button type="submit" class="register_btn">Регистрация</button>
+
+        <div class="signin">
+            <p>Уже есть аккаунт? <a th:href="login"> Ввойдите </a>.</p>
+        </div>
+        <br/>
+    </div>
+</form>
+
+</body>
+</html>

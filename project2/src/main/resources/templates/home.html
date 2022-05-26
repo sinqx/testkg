@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event-KG</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+
+<body>
+<div th:insert="navbar :: navbar"></div>
+
+<body class="news">
+<div class="homeBlock">
+    <div class="home">
+        <tr th:each="test: ${tests}">
+            <div class="homeText">
+                <div class="testDescription">
+                    <a class="text" th:text="${test.title}" th:href="@{/playTest/{id}(id = ${test.getId()})} "></a>
+                </div>
+                <a th:href="@{/playTest/{id}(id = ${test.getId()})} ">
+                    <img class="homePics" th:src="${test.getMainPhoto().getURL()}"></a>
+                <div class="homeTestInfo"><a th:text="${test.creationDate.toLocalDate()}"></a>
+                    <a class="infoText" th:href="@{/userPage/{id}(id = ${test.creatorUser.id})}"
+                       th:text="'Author: ' + ${test.creatorUser.fullName}"></a></div>
+            </div>
+        </tr>
+    </div>
+</div>
+</div>
+</body>
+</body>
+</html>

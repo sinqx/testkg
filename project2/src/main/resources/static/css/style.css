@@ -1,0 +1,465 @@
+header
+{
+    width: 1700px;
+    background-color: #5b9ecd;;
+    height: 70px;
+}
+
+body
+{
+    margin: -17px auto;
+    padding: 2px;
+    background: #2b2b2b;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20pt;
+    font-weight: 300;
+    color: white;
+    background: url(back.jpg) fixed;
+}
+.block-body
+{
+    width: 1700px;
+    margin: 40px auto;
+    height: auto;
+}
+
+
+.mainLogo
+{
+
+    width: 400px;
+    height:80px;
+    float: left;
+}
+
+.mainLogo a
+{
+    display: inline;
+    margin-left: 80px;
+    margin-top: 100px;
+    font-family: 'Kanit', sans-serif;
+    text-shadow: black 0 0 10px;
+    font-size: 55px;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.navBarMenu
+{
+    width: 800px;
+    height: 70px;
+    float: left;
+
+}
+
+.navBarMenu ul li a
+{
+    display: inline-block;
+    width: 300px;
+    text-decoration: none;
+    font-family: 'Kanit', sans-serif;
+    font-size: 30pt;
+    color: white;
+    height: 55px;
+    padding-top: 15px;
+    cursor: pointer;
+    text-shadow: black 0 0 4px;
+}
+
+.navBarMenu ul li
+{
+    text-align: center;
+    float: left;
+    list-style: none;
+}
+.navBarMenu ul li a:hover
+{
+    transition: 0.2s;
+    background-color: #4a6e8f;
+}
+
+.auth
+{
+    float: right;
+    width: 150px;
+}
+.auth img
+{
+    margin: auto;
+    width: 70px;
+    height: 64px;
+    cursor: pointer;
+}
+.auth :hover
+{
+    transition: 0.2s;
+    background-color: #4a6e90;
+}
+
+.block
+{
+    margin: 50px auto;
+    width: 1200px;
+    background-color: #5b9ecd;
+    height: auto;
+}
+.reg_block
+{
+    margin: 20px auto;
+    width: 600px;
+    background-color: #5b9ecd;
+    height: auto;
+    border-radius: 20px;
+    font-family: 'Kanit', sans-serif;
+    text-shadow: black 0 0 4px;
+}
+
+.my_page
+{
+    width: 900px;
+    border-radius: 4px;
+    padding: 20px 20px 0;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 0;
+    height: auto;
+    min-height: 390px;
+    background: #5b9ecd;
+    box-shadow: 0 0 3px;
+}
+
+.content
+{
+    margin: 20px auto;
+    width: 1200px;
+    background-color: #e3e3e3;
+    height: 300px;
+    padding: 0px;
+}
+
+.text
+{
+    text-align: center;
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    padding: 0px;
+    overflow-wrap: break-word;
+}
+
+.text a
+{
+    padding-top: 20px;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-weight:bold;
+    color: black;
+    font-size: 35px;
+    word-break: break-word;
+    text-decoration: none;
+}
+
+.text a:hover
+{
+    color: #1e3c59;
+    text-decoration: underline;
+}
+
+.text p
+{
+    margin-top: 20px;
+    font-family: 'Kanit', sans-serif;
+    color: black;
+    font-size: 20px;
+}
+
+.content2
+{
+    padding: 20px;
+    margin: 20px auto;
+    width: 1194px;
+    background-color: #ededed;
+    height: auto;
+    padding: 0px;
+    color: black;
+    border: 3px solid grey;
+}
+
+.content2 p
+{
+    font-family: 'Kanit', sans-serif;
+    color: black;
+    font-size: 25px;
+    padding: 30px;
+    height: auto;
+
+}
+.content2 img
+{
+    display: block;
+    margin: 0 auto;
+    width: 800px;
+}
+
+.content2 iframe
+{
+    display: block;
+    margin: 0 auto;
+    height: 350px;
+}
+
+
+
+input[type=text], input[type=password] {
+    width: 400px;
+    padding: 8px;
+    margin: 14px;
+    display: inline-block;
+    text-decoration-color: black;
+}
+label
+{
+    margin: 16px;
+}
+.register_btn {
+    position: center;
+    background-color: green;
+    color: white;
+    padding: 15px 20px;
+    margin: 7px 1px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.signin
+{
+    text-align: center;
+}
+.settings
+{
+    text-align: right;
+    color: black;
+    margin: 35px 0 0 0;
+}
+
+.settings a{
+    margin: 10px;
+}
+
+.signin a
+{
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.reg
+{
+
+    margin: -4px 21px;
+    color: white;
+}
+
+.page
+{
+    margin: 0 0 -30px 400px;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    text-shadow: black 0 0 10px;
+    max-width: 800px;
+}
+
+.pageSettings
+{
+    margin: 25px 0 0 30px;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    text-shadow: black 0 0 10px;
+    max-width: 800px;
+}
+
+
+.form-control
+{
+    width: 507px;
+    font-size: 25px;
+}
+
+.testDescription{
+    text-decoration: none;
+    font-family: 'Kanit', sans-serif;
+    font-size: 30pt;
+}
+
+.homeBlock{
+    margin: 0 auto;
+    width: 1196px;
+    position: relative;
+}
+
+.homePics{
+    max-width: 100%;
+    width: 400px;
+    height: 300px;
+    line-height: 0;
+    overflow: hidden;
+    border-radius: 2px;
+    align-items: center;
+    object-fit: cover;
+    box-shadow: #003153 0 0 2px 0;
+}
+
+.userPic{
+    max-width: 100%;
+    width: 360px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: #003153 0 0 2px 0;
+    margin: 0 10px  0;
+}
+
+.testPic{
+    width: 250px;
+    height: 250px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: #003153 0 0 2px 0;
+    margin: 50px 0 0 0;
+}
+
+.homeText{
+    width: auto;
+    border-radius: 4px;
+    padding: 18px 10px 0;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    grid-column: auto;
+    grid-row: auto;
+    border: 0;
+    height: 490px;
+    min-height: 430px;
+    /* cursor: pointer; */
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr min-content;
+    background: #5b9ecd;
+    box-shadow: 0 0 3px;
+}
+.homeTestInfo{
+    top: unset;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    vertical-align: middle;
+    color: #2b2b2b;
+    white-space: nowrap;
+    display: grid;
+    grid-template-columns: 1fr min-content min-content;
+}
+a.text:active,
+a.text:hover,
+a.text {
+    text-decoration: none;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    text-shadow: black 0 0 5px;
+}
+
+.infoText{
+    text-align: center;
+    padding: 0px;
+    overflow-wrap: break-word;
+    text-decoration: none;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    text-shadow: black 0 0 5px;
+}
+
+.home{
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    position: relative;
+    grid-auto-rows: auto;
+    z-index: 1;
+    width: 100%;
+    float: none;
+}
+
+.calendar {
+    margin-bottom: 26px;
+    font-size: 20px;
+}
+
+.calendar.label {
+    display: inline-block;
+    width: 300px;
+}
+
+.calendar.input:invalid+span:after {
+    content: '✖';
+    padding-left: 5px;
+}
+
+.calendar.input:valid+span:after {
+    content: '✓';
+    padding-left: 5px;
+}
+
+.ques-box {
+    width: 100%;
+    max-width: 800px;
+    padding: 15px 25px;
+    margin: 50px auto 0 auto;
+    border-radius: 4px;
+    background-color: #5b9ecd;
+}
+
+.titleQuestion{
+    display: inline;
+
+    font-family: 'Kanit', sans-serif;
+    text-shadow: black 0 0 8px;
+    font-size: 50px;
+    color: white;
+    text-decoration: underline;
+}
+
+
+.optionText{
+    text-decoration: none;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20pt;
+    color: white;
+    text-shadow: black 0 0 4px;
+    margin: 5px;
+}
+
+.creationDate{
+    text-align-all: left;
+}

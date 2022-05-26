@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Test-KG</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+
+<body>
+<div th:insert="navbar :: navbar"></div>
+
+
+<div class="container" style="max-width: fit-content; margin: 5em auto;">
+    <form class="my_page" enctype="multipart/form-data" th:action="@{/saveSettings}" th:object="${user}" method="post">
+        <img th:object="${Photo}" th:src="${Photo.getURL()}"
+             align="left" width="300px" class="userPic">
+        <div class="pageSettings">
+            <h1> Ваше имя
+                <ul><input type="text" class="form-control"
+                           th:field="*{fullName}"/></ul>
+            </h1>
+            <a>Телефон: <input type="text" class="form-control" th:field="*{phoneNumber}"
+                               required autofocus="autofocus"/></a>
+            <br/><br/>
+            <label for="dateOfBirth">Дата рождения:</label>
+            <input type="date" id="dateOfBirth" th:field="${user.dateOfBirth}"
+                   th:value="${user.dateOfBirth}" required
+                   min="1900-01-01" max="2018-12-31">
+            <p><input value="null" type="file" name="file" accept="image/*,image/jpeg">
+            <button type="submit" class="register_btn">Сохранить</button>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>
