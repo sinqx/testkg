@@ -38,20 +38,9 @@ public class TestController {
     public String createTest(Model model) {
         model.addAttribute("test", new Test());
         model.addAttribute("questions", new HashSet<TestQuestion>());
-        return "/createTest";
+        return "createTest";
     }
 
-
-//    @PostMapping("/testSave")
-//    public String save(@RequestParam(name = "file") MultipartFile multipartFile,  Model model, Test test) {
-//        if(!multipartFile.isEmpty()) {
-//            Photo photo = photoService.save(multipartFile);
-//            test.setMainPhoto(photo);
-//        }
-//        model.addAttribute("test", test);
-//        model.addAttribute("questions", new HashSet<TestQuestion>());
-//        return "/questionAdd/";
-//    }
 
     @PostMapping("/testSave")
     public String testSave(
@@ -77,7 +66,7 @@ public class TestController {
 
         model.addAttribute("test", tests);
 
-        return "redirect:/testDetails/" + test.getId();
+        return "redirect:testDetails/" + test.getId();
     }
 
     @PostMapping("/questionAdd")
@@ -95,7 +84,7 @@ public class TestController {
         model.addAttribute("test", test);
         model.addAttribute("questions", questions);
 
-        return "redirect:/testDetails/" + test.getId();
+        return "redirect:testDetails/" + test.getId();
     }
 
     @GetMapping("/testDetails/{testId}")
@@ -121,7 +110,7 @@ public class TestController {
     public String getAllTests(Model model) {
         List<Test> tests = testService.getAllTests();
         model.addAttribute("testInfo", tests);
-        return "/index";
+        return "index";
     }
 
     @GetMapping("/getAllUserTests")
@@ -138,7 +127,7 @@ public class TestController {
         Test test = testService.findById(testId);
         model.addAttribute("testInfo", test);
         model.addAttribute("answer", new AnswerModel());
-        return "/playTest";
+        return "playTest";
     }
 
     @PostMapping("/submit")
