@@ -21,7 +21,7 @@ public class PhotoController {
     public String save(@RequestParam(name = "file") MultipartFile multipartFile, Model model) {
         Photo photo = photoService.save(multipartFile);
         model.addAttribute("Photo", photo);
-        return "/userSettings";
+        return "userSettings";
     }
 
     @GetMapping("/photo/{photoId}")
