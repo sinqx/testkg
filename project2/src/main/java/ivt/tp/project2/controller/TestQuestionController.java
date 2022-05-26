@@ -36,7 +36,7 @@ public class TestQuestionController {
 
         model.addAttribute("Test", test);
         model.addAttribute("questions", questions);
-        return "redirect:addQuestions/" + test.getId();
+        return "redirect:testDetails/" + test.getId();
     }
 
     @GetMapping("question/{testQuestionId}")
