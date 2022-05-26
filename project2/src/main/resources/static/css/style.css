@@ -463,3 +463,15 @@ a.text {
 .creationDate{
     text-align-all: left;
 }
+
+.descriptionText{
+    text-align: left;
+    margin: 0px auto;
+    width: 300px;
+    height: 88px;
+    padding: 0px;
+    overflow-wrap: break-word;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 2px black;
+}
