@@ -29,7 +29,7 @@
             <br/><br/>
         </div>
         <div  sec:authorize="isAuthenticated()" class="settings">
-            <a class="text" th:href="@{userSettings}"> Редактировать </a>
+            <a class="text" th:href="@{/userSettings.html}"> Редактировать </a>
             <a class="text" th:href="@{/createTest}"> Создать новый тест</a>
         </div>
     </form>
