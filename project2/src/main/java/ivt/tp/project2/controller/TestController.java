@@ -96,7 +96,11 @@ public class TestController {
         model.addAttribute("question", new TestQuestion());
         model.addAttribute("test", test);
         model.addAttribute("questions", questions);
-        return "testDetails";
+          String login = SecurityContextHolder.getContext().getAuthentication().getName();
+        User user = userService.findByLogin(login);
+        if (test.getCreatorUser() == user) {
+            return "testDetails";
+        }else return "playTest/"+ testId;
     }
 
     @GetMapping("/{testId}")
