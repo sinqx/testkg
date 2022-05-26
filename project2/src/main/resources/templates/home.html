@@ -18,6 +18,7 @@
                 <div class="testDescription">
                     <a class="text" th:text="${test.title}" th:href="@{/playTest/{id}(id = ${test.getId()})} "></a>
                 </div>
+                 <a class="descriptionText"  th:text="${test.description}"  th:href="@{/playTest/{id}(id = ${test.getId()})} "></a>
                 <a th:href="@{/playTest/{id}(id = ${test.getId()})} ">
                     <img class="homePics" th:src="${test.getMainPhoto().getURL()}"></a>
                 <div class="homeTestInfo"><a th:text="${test.creationDate.toLocalDate()}"></a>
