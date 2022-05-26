@@ -41,7 +41,7 @@
                     <tr th:each="test: ${tests}">
                         <td class="col-sm-10">
                            <a>Название теста:   </a> <a class="text" th:text="${test.title}"
-                               th:href="@{/addQuestions/{id}(id = ${test.getId()})} ">
+                               th:href="@{/testDetails/{id}(id = ${test.getId()})} ">
                                </a><a class="creationDate" th:text="'Создано: ' + ${test.creationDate.toLocalDate()}"></a>
                         </td>
                     </tr>
