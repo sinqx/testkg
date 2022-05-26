@@ -63,7 +63,7 @@ public class UserController {
         Photo photo = photoService.findById(user.getPhotoId());
         model.addAttribute("Photo", photo);
         model.addAttribute("user", user);
-        return "/userSettings";
+        return "userSettings";
     }
 
     @PostMapping("/saveSettings")
